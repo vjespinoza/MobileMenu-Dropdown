@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #beeffb;
+}
+
+/* BASIC FORMATTING */
+
+.NavBar {
+  display: flex;
+  justify-content: center;
+  background-color: #111116;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.NavBar ul,
+.NavBar ul li {
+  list-style: none;
+  width: 100%;
+}
+
+.NavBar a,
+.NavBar label {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+label i {
+  margin-left: 5px;
+}
+
+input {
+  display: none;
+}
+
+/* FUNCTIONALITY */
+
+.menu-T1 {
+  position: relative;
+}
+
+.menu-T2.SubMenu-1 {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.menu-T2.SubMenu-1 li a {
+  color: rgba(255, 255, 255, 0);
+}
+
+.menu-T2.SubMenu-2 {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.menu-T2.SubMenu-2 li a {
+  color: rgba(255, 255, 255, 0);
+}
+
+#show1:checked ~ .menu-T2.SubMenu-1 {
+  display: block;
+  visibility: visible;
+  height: 150px;
+}
+
+#show1:checked ~ .menu-T2.SubMenu-1 li a {
+  color: rgba(255, 255, 255, 1);
+}
+
+#show2:checked ~ .menu-T2.SubMenu-2 {
+  display: block;
+  visibility: visible;
+  height: 200px;
+}
+
+#show2:checked ~ .menu-T2.SubMenu-2 li a {
+  color: rgba(255, 255, 255, 1);
+}
